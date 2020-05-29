@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tab-pane fade in active" id="load">
+        <table style="white-space:nowrap;margin-top: 20px;margin-left:30px">
+          <tr>
+            <td>
+              <label style="font-weight: inherit; padding-right: 10px;">
+                <span >Load from</span>
+              </label>
+              
+            </td>
+            <td><label style="font-weight: inherit;">
+                <input type="radio" name="loadmode" value="on" data-bind="checked: loadMode" />
+                <span data-bind="Share"></span>
+              </label>
+              <label style="margin-left:15px;font-weight: inherit;">
+                <input type="radio" name="loadmode" value="off" data-bind="checked: loadMode" />
+                <span data-bind="Personal"></span>
+              </label></td>
+          </tr>
+          <tr>
+            <td><label style="font-weight: inherit; padding-right: 10px;">
+                <span data-bind="Preset"></span>
+              </label></td>
+            <td><select style="width:250px;"
+                data-bind="attr: { disabled:!isLoadEnabled()}, options: loadOptList, optionsText: 'name', optionsValue: 'id', value: loadInput, optionsCaption: 'Choose...', select2: {}">
+              </select>
+              <button class="btn btn-sm" type="button" data-bind="click: styleLoad">
+                <span data-bind="Load"></span>
+              </button></td>
+          </tr>
+        </table>
+      </div>
+
+</body>
+</html>
