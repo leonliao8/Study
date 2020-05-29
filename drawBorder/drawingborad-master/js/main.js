@@ -184,7 +184,7 @@ function getColor(){
 }
 
 let historyDeta = [];
-
+//可以撤销恢复到上一步
 function saveData (data) {
     (historyDeta.length === 10) && (historyDeta.shift());// 上限为储存10步，太多了怕挂掉
     historyDeta.push(data);
