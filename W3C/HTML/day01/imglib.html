@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>imglib</title>
+    <script src="showPic.js">window.onload = countBodyChildren;</script>
 </head>
 <body>
     <h1>img library</h1>
+    <a href="http://baidu.com" onclick="return false">Click</a>
     <ul>
-        <li><a href="img/bike.jpg" title="a motobike">bike</a></li>
-        <li><a href="img/building.jpg" title="a big building">building</a></li>
-        <li><a href="img/light.jpg" title="spark lighting">Light</a></li>
-        <li><a href="img/people.jpg" title="two people talking">people</a></li>
+        <li><a href="img/bike.jpg"  onclick="showPic(this);return false" title="a motobike">bike</a></li>
+        <li><a href="img/building.jpg" onclick="showPic(this);return false" title="a big building">building</a></li>
+        <li><a href="img/light.jpg" onclick="showPic(this);return false" title="spark lighting">Light</a></li>
+        <li><a href="img/people.jpg" onclick="showPic(this);return false" title="two people talking">people</a></li>
     </ul>
+    <div><img id="placeholder" src="img/placeholder.jpg" alt="my image gallery"></div>
 </body>
 </html>
