@@ -40,6 +40,35 @@
             height: 400px;
             border: 2px,lightcoral;
         }
+        .box {
+            background-color: lightcoral;
+            width: 960px;
+            height: 500px;
+            /* 方法一：绝对定位计算 */
+            position:absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -480px;
+            margin-top: -250px;
+            /* 方法二：绝对定位自动 */
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .b1 {
+            margin: 0 3px;
+            background-color: black;
+        }
+        .b2,
+        .b3,
+        .b4,
+        .mid {
+            border-left: 1px solid #000;
+            border-right: 1px solid #000;
+        }
     </style>
 </head>
 <body>
@@ -92,5 +121,23 @@
 
     <img src="https://photo.16pic.com/00/93/33/16pic_9333405_b.jpg" alt="">
     
+    <div class="bor">
+        <div class="b1"></div>
+        <div class="b2"></div>
+        <div class="b3"></div>
+        <div class="b4"></div>
+    </div>
+
+    <div class="mid">
+        <p>不使用border-radius的情况下实现一个可复用的高度和宽度都自适应的圆角矩形</p>
+    </div>
+
+    <div class="bor">
+        <div class="b4"></div>
+        <div class="b3"></div>
+        <div class="b2"></div>
+        <div class="b1"></div>
+    </div>
+
 </body>
 </html>
